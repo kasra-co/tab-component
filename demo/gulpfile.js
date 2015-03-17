@@ -28,5 +28,6 @@ function bundle() {
 	.pipe( source( 'index.min.js' ))
 	.pipe( buffer() )
 	.pipe( sourcemaps.init({ loadMaps: true }))
+	.pipe( sourcemaps.write() )
 	.pipe( gulp.dest( './dist' ));
 }
