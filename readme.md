@@ -1,6 +1,6 @@
 # FEMbot
 
-A seed project for front end modules, with automated build and tests.
+A seed project for front end modules, with automated build.
 
 ## Tooling
 
