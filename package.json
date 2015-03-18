@@ -1,12 +1,15 @@
 {
-  "name": "fembot",
+  "name": "tab-component",
   "version": "1.0.0",
   "description": "Seed project for front end modules.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dan Ross <daniel.ross@kasra.co>",
+  "author": "William Akehurst william@kasra.co",
+  "contributors": [
+    "Dan Ross <daniel.ross@kasra.co>"
+  ],
   "license": "ISC",
   "dependencies": {
     "react": "^0.13.0",
