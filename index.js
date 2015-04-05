@@ -9,6 +9,7 @@ It should only export objects from the ./lib directory.
 exports.TabList = require( './lib/tab-list' );
 exports.TabPanels = require( './lib/tab-panels' );
 exports.TabView = require( './lib/tab-view' );
+exports.ExtendableTabView = require( './lib/extendable-tab-view' );
 
 /*
 exports.storeName = {} OR exports.stores = {} if there are more than one
