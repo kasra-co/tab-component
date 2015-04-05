@@ -18,3 +18,4 @@ Passes down the following props:
  - createPanel={ this.createPanel } - func
  - removePanel={ this.removePanel } - func
  - tabPanels={ this.state.Panels }
+ - deletepanel - currently set as string "close", could be an icon or image

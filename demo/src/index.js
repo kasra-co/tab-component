@@ -47,7 +47,8 @@ var Demo = React.createClass({
 					tabLabels={ this.state.Tabs }
 					createPanel={ this.createPanel }
 					removePanel={ this.removePanel }
-					tabPanels={ this.state.Panels } />
+					tabPanels={ this.state.Panels }
+					deletePanel="close" />
 			</div>
 		);
 	}
