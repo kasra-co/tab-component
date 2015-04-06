@@ -40,6 +40,7 @@ var Demo = React.createClass({
 		return (
 			<div>
 				<TabView
+					initialSelection={ 0 }
 					tabLabels={['1','2','3','4']}
 					tabPanels={[<p>1a</p>,<p>2a</p>,<p>3a</p>,<p>4a</p>]} />
 				<ExtendableTabView
@@ -48,7 +49,8 @@ var Demo = React.createClass({
 					createPanel={ this.createPanel }
 					removePanel={ this.removePanel }
 					tabPanels={ this.state.Panels }
-					deletePanel="close" />
+					deletePanel="close"
+					initialSelection={ 0 } />
 			</div>
 		);
 	}
