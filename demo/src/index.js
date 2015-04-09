@@ -12,7 +12,9 @@ var Demo = React.createClass({
 	getInitialState: function () {
 		return {
 			Panels: [<p>1b</p>,<p>2b</p>,<p>3b</p>,<p>4b</p>],
-			Tabs: ['1','2','3','4']
+			Tabs: ['1','2','3','4'],
+			Panels1: [<p>1a</p>,<p>2a</p>,<p>3a</p>,<p>4a</p>],
+			Tabs1: ['1','2','3','4']
 		};
 	},
 
@@ -36,14 +38,26 @@ var Demo = React.createClass({
 		});
 	},
 
+	removeQuestion: function ( index ) {
+		var Panels1 = _.clone( this.state.Panels1 );
+		var Tabs1 = _.clone( this.state.Tabs1 );
+		Panels1.splice ( index, 1 );
+		Tabs1.splice ( index, 1 );
+		this.setState ({
+			Panels1: Panels1,
+			Tabs1: Tabs1
+		});
+	},
+
 	render: function() {
 		return (
 			<div>
 				<TabView
 					initialSelection={ 0 }
-					tabLabels={['1','2','3','4']}
-					tabPanels={[<p>1a</p>,<p>2a</p>,<p>3a</p>,<p>4a</p>]}
-					deletePanel={<a>delete them panels</a>} />
+					tabLabels={ this.state.Tabs1 }
+					tabPanels={ this.state.Panels1 }
+					removeQuestion={ this.removeQuestion }
+					deletePanel={<span>delete them panels</span>} />
 				<ExtendableTabView
 					newTabLabel={ 'new tab' }
 					tabLabels={ this.state.Tabs }
