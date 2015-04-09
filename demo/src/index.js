@@ -42,7 +42,8 @@ var Demo = React.createClass({
 				<TabView
 					initialSelection={ 0 }
 					tabLabels={['1','2','3','4']}
-					tabPanels={[<p>1a</p>,<p>2a</p>,<p>3a</p>,<p>4a</p>]} />
+					tabPanels={[<p>1a</p>,<p>2a</p>,<p>3a</p>,<p>4a</p>]}
+					deletePanel={<a>delete them panels</a>} />
 				<ExtendableTabView
 					newTabLabel={ 'new tab' }
 					tabLabels={ this.state.Tabs }
