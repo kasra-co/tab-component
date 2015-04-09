@@ -64,6 +64,7 @@ var Demo = React.createClass({
 					createPanel={ this.createPanel }
 					removePanel={ this.removePanel }
 					tabPanels={ this.state.Panels }
+					tooltip={ "test" }
 					deletePanel="close"
 					initialSelection={ 0 } />
 			</div>
