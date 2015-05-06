@@ -27,7 +27,7 @@ var Demo = React.createClass({
 		});
 	},
 
-	removePanel: function ( index ) {
+	removeExtendableTabViewPanel: function ( index ) {
 		var Panels = _.clone( this.state.Panels );
 		var Tabs = _.clone( this.state.Tabs );
 		Panels.splice ( index, 1 );
@@ -38,7 +38,7 @@ var Demo = React.createClass({
 		});
 	},
 
-	removeQuestion: function ( index ) {
+	removeTabViewPanel: function ( index ) {
 		var Panels1 = _.clone( this.state.Panels1 );
 		var Tabs1 = _.clone( this.state.Tabs1 );
 		Panels1.splice ( index, 1 );
@@ -56,13 +56,13 @@ var Demo = React.createClass({
 					initialSelection={ 0 }
 					tabLabels={ this.state.Tabs1 }
 					tabPanels={ this.state.Panels1 }
-					removeQuestion={ this.removeQuestion }
+					removePanel={ this.removeTabViewPanel }
 					deletePanel={<span>delete them panels</span>} />
 				<ExtendableTabView
 					newTabLabel={ 'new tab' }
 					tabLabels={ this.state.Tabs }
 					createPanel={ this.createPanel }
-					removePanel={ this.removePanel }
+					removePanel={ this.removeExtendableTabViewPanel }
 					tabPanels={ this.state.Panels }
 					resultTitle={ "test" }
 					deletePanel="close"
