@@ -14,7 +14,8 @@ var Demo = React.createClass({
 			Panels: [<p>1b</p>,<p>2b</p>,<p>3b</p>,<p>4b</p>],
 			Tabs: ['1','2','3','4'],
 			Panels1: [<p>1a</p>,<p>2a</p>,<p>3a</p>,<p>4a</p>],
-			Tabs1: ['1','2','3','4']
+			Tabs1: ['1','2','3','4'],
+			selected : 0
 		};
 	},
 
@@ -49,11 +50,18 @@ var Demo = React.createClass({
 		});
 	},
 
+	select: function (selected) {
+		this.setState({
+			selected: selected
+		});
+	},
+
 	render: function() {
 		return (
 			<div>
 				<TabView
-					initialSelection={ 0 }
+					select={ this.select }
+					selected={ this.state.selected }
 					tabLabels={ this.state.Tabs1 }
 					tabPanels={ this.state.Panels1 }
 					removePanel={ this.removeTabViewPanel }
