@@ -2,9 +2,9 @@ var React = require( 'react' );
 var _ = require('lodash');
 
 // Require index.js from the root of the project. That is where our module's interface is specified.
-var ExampleComponent = require( '../..' ).ExampleComponent;
-var TabView = require( '../..' ).TabView;
-var ExtendableTabView = require( '../..' ).ExtendableTabView;
+var ExampleComponent = require( '../../src' ).ExampleComponent;
+var TabView = require( '../../src' ).TabView;
+var ExtendableTabView = require( '../../src' ).ExtendableTabView;
 
 
 var Demo = React.createClass({
